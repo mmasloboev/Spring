@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Addition</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/calculator/addition}" th:object="${calculator}">
+    <label for="a">First number: </label>
+    <input type="number" th:field="*{a}" id="a">
+
+    <br/>
+
+    <label for="b">Second number: </label>
+    <input type="number" th:field="*{b}" id="b">
+
+    <br/>
+    <br/>
+
+    <input type="submit" value="OK">
+</form>
+
+<br/>
+<hr/>
+
+</body>
+</html>
