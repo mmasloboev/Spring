@@ -29,3 +29,4 @@ public class CalculatorController {
     public String add(@ModelAttribute("calculator") Calculator calculator) {
         return "redirect:/calculator/addition";
     }
+}
