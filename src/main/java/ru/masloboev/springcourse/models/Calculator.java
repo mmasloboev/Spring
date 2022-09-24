@@ -8,6 +8,8 @@ public class Calculator {
     private long a;
     private long b;
 
+    private long c;
+
     public long getA() {
         return a;
     }
@@ -24,19 +26,19 @@ public class Calculator {
         this.b = b;
     }
 
-    public long addition(long a, long b) {
-        return a + b;
+    public void addition(long a, long b) {
+        c = a + b;
     }
 
-    public long division(long a, long b) {
-        return a / b;
+    public void division(long a, long b) {
+        c = a / b;
     }
 
-    public long subtraction(long a, long b) {
-        return a - b;
+    public void subtraction(long a, long b) {
+        c = a - b;
     }
 
-    public long multiplication(long a, long b) {
-        return a * b;
+    public void multiplication(long a, long b) {
+        c = a * b;
     }
 }

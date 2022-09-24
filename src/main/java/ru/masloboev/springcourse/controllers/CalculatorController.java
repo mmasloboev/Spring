@@ -27,6 +27,12 @@ public class CalculatorController {
 
     @PostMapping()
     public String add(@ModelAttribute("calculator") Calculator calculator) {
-        return "redirect:/calculator/addition";
+       // calculator.addition();
+        return "redirect:/result";
+    }
+
+    @GetMapping("/result")
+    public String result() {
+        return "calculator/result";
     }
 }

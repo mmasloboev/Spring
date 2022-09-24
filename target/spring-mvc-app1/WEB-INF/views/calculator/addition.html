@@ -5,7 +5,7 @@
     <title>Addition</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/calculator/addition}" th:object="${calculator}">
+<form th:method="POST" th:action="@{/calculator/result}" th:object="${calculator}">
     <label for="a">First number: </label>
     <input type="number" th:field="*{a}" id="a">
 
@@ -19,9 +19,5 @@
 
     <input type="submit" value="OK">
 </form>
-
-<br/>
-<hr/>
-
 </body>
 </html>
