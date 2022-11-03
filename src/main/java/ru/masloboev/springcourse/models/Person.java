@@ -1,7 +1,10 @@
 package ru.masloboev.springcourse.models;
 
+
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.List;
+
 @Entity
 @Table(name = "Person")
 public class Person {
@@ -25,6 +28,11 @@ public class Person {
     @Column(name = "email")
     private String email;
 
+    @OneToMany(mappedBy = "owner")
+    private List<Item> items;
+
+    @Enumerated(EnumType.STRING)
+    private Mood mood;
     public Person() {
 
     }
@@ -67,6 +75,21 @@ public class Person {
         this.email = email;
     }
 
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    public Mood getMood() {
+        return mood;
+    }
+
+    public void setMood(Mood mood) {
+        this.mood = mood;
+    }
 
     @Override
     public String toString() {
